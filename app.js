@@ -17,7 +17,20 @@ app.get('/', (req, res) => {
 });
 
 app.post('/summary', (req, res) => {
-    res.render('summary');
+
+    const workout = {
+        type: req.body.type,
+        duration: req.body.duration,
+        intensity: req.body.intensity,
+        date: req.body.date,
+        notes: req.body.notes
+    };
+
+    workouts.push(workout);
+
+    console.log(workouts);
+
+    res.render('summary', { workouts });
 });
 
 app.listen(PORT, () => {

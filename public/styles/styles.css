@@ -1,6 +1,21 @@
 body
 {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 20%;
+    font-size: large;
+}
+
+fieldset
+{
+    border: solid 5px rgb(238, 238, 238);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label
+{
+    margin: 5px;
+    display: inline-block;
 }
 
 button
@@ -11,4 +26,18 @@ button
     height:25px;
     border-radius: 4px;
     border:none;
+    margin: 0 auto;
+    display:block;
+}
+
+textarea, select, input
+{
+    width: 100%;
+    border-radius: 5px;
+    border: solid 2px rgb(98, 151, 82, .2);
+}
+
+.radios
+{
+    width: 20%;
 }

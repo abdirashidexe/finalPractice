@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Summary</title>
-    <link rel="stylesheet" href="styles/styles.css">
     <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <h1>Workout Summary</h1>
     <fieldset>
 
-    <h2>Logged Workout</h2>
+    <h2>Logged Workouts</h2>
     <hr>
 
-    <p><strong>Workout Type:</strong> example</p>
-    <p><strong>Workout Type:</strong> example</p>
-    <p><strong>Workout Type:</strong> example</p>
-    <p><strong>Workout Type:</strong> example</p>
-    <p><strong>Workout Type:</strong> example</p>
+    <% if (workouts.length == 0) { %>
+        <p>No workouts to display.</p>
+    <% } else { %>
+    <% for (let i = 0; i < workouts.length; i++) {%>
+        <h3>Workout #<%= i+1 %></h3>
+        <p><strong>Workout Type: </strong><%= workouts[i].type %></p>
+        <p><strong>Duration: </strong><%= workouts[i].duration %></p>
+        <p><strong>Intensity: </strong><%= workouts[i].intensity %></p>
+        <p><strong>Date: </strong><%= workouts[i].date %></p>
+        <p><strong>Notes: </strong><%= workouts[i].notes %></p>
+        <hr>
+    <% } %>
+    <% } %>
 
     <button id="anotherBtn">Log Another Workout</button>
 </fieldset>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Fitness Tracker App</title>
+    <script src="/script.js" defer></script>
     <link rel="stylesheet" href="styles/styles.css">
-    
 </head>
 <body>
     <form action="/summary" method="post">
@@ -14,35 +14,35 @@
         <fieldset>
         <label>Workout Type:</label>
         <br>
-        <select>
-            <option>Running</option>
-            <option>Weightlifting</option>
-            <option>Yoga</option>
-            <option>Cycling</option>
-            <option>Other</option>
+        <select name="type">
+            <option value="running">Running</option>
+            <option value="weightlifting">Weightlifting</option>
+            <option value="yoga">Yoga</option>
+            <option value="cycling">Cycling</option>
+            <option value="other">Other</option>
         </select>
         <br>
 
         <label>Duration (minutes):</label>
         <br>
-        <input type="text">
+        <input type="text" name="duration">
         <br>
 
         <label>Intensity Level:</label>
         <br>
-        <input type="radio">Low</input>
-        <input type="radio">Medium</input>
-        <input type="radio">High</input>
+        <input type="radio" name="intensity" value="low" class="radios">Low</input>
+        <input type="radio" name="intensity" value="med" class="radios">Medium</input>
+        <input type="radio" name="intensity" value="high" class="radios">High</input>
         <br>
 
         <label>Date:</label>
         <br>
-        <input type="date">
+        <input type="date" name="date">
         <br>
 
         <label>Notes:</label>
         <br>
-        <textarea placeholder="Additional comments..."></textarea>
+        <textarea placeholder="Additional comments..." name="notes"></textarea>
         <br>
         <button type="submit">Log Workout</button>
     </fieldset>
