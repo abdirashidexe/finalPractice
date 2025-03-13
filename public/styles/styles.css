@@ -1,8 +1,8 @@
 body
 {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 20%;
-    font-size: large;
+    align-content: center;
+    margin:10%;
 }
 
 fieldset
@@ -10,6 +10,8 @@ fieldset
     border: solid 5px rgb(238, 238, 238);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 label
@@ -35,6 +37,16 @@ textarea, select, input
     width: 100%;
     border-radius: 5px;
     border: solid 2px rgb(98, 151, 82, .2);
+}
+
+input
+{
+    height:20px;
+}
+
+select
+{
+    height: 30px;
 }
 
 .radios
