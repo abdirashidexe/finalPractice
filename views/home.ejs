@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Fitness Tracker App</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    
+</head>
+<body>
+    <form action="/summary" method="post">
+        <h1>Personal Fitness Tracker</h1>
+
+        <fieldset>
+        <label>Workout Type:</label>
+        <br>
+        <select>
+            <option>Running</option>
+            <option>Weightlifting</option>
+            <option>Yoga</option>
+            <option>Cycling</option>
+            <option>Other</option>
+        </select>
+        <br>
+
+        <label>Duration (minutes):</label>
+        <br>
+        <input type="text">
+        <br>
+
+        <label>Intensity Level:</label>
+        <br>
+        <input type="radio">Low</input>
+        <input type="radio">Medium</input>
+        <input type="radio">High</input>
+        <br>
+
+        <label>Date:</label>
+        <br>
+        <input type="date">
+        <br>
+
+        <label>Notes:</label>
+        <br>
+        <textarea placeholder="Additional comments..."></textarea>
+        <br>
+        <button type="submit">Log Workout</button>
+    </fieldset>
+    </form>
+</body>
+</html>
